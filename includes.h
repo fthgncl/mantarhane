@@ -8,3 +8,11 @@ IPAddress secondaryDNS(8, 8, 4, 4);
 const char* ssid = "deneme-bile";
 const char* password = "wifibizeozel";
 /***********************/
+
+/* Async WebServer includes */
+#include <ESPAsyncTCP.h>
+#include <ESPAsyncWebServer.h>
+#include <AsyncElegantOTA.h>
+#define webServerPort 80
+AsyncWebServer server(webServerPort);
+/***********************/
