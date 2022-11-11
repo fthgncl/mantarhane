@@ -5,8 +5,6 @@ IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 0, 0);
 IPAddress primaryDNS(8, 8, 8, 8);
 IPAddress secondaryDNS(8, 8, 4, 4);
-const char* ssid = "deneme-bile";
-const char* password = "wifibizeozel";
 /***********************/
 
 /* Async WebServer includes */
@@ -17,12 +15,4 @@ const char* password = "wifibizeozel";
 AsyncWebServer server(webServerPort);
 /***********************/
 
-/* HTTPClient - AsyncJson - SQL includes */
 #include <ESP8266HTTPClient.h>
-#include <AsyncJson.h>
-const String ServerDomain = "http://mantarhane.tk";
-const String ServerPHPpage = "sql_komut.php";
-const String SQL_username = "mantarhane_Mantar";
-const String SQL_password = "Harun.14";
-const String SQL_dataBaseName = "mantarhane_mantar";
-/***********************/
