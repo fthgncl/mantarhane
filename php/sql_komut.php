@@ -1,13 +1,26 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] != "POST"){
-    break;
-}
-
 $data = json_decode(file_get_contents('php://input'), true);
 $dataBase = veriTabaninaBaglan($data['username'], $data['password'], $data['databaseName']);
-veriTabaniKomutGonder($dataBase, $data['command']);
-mysqli_close($dataBase);
 
+switch($_SERVER["REQUEST_METHOD"]){
+    case "POST":{
+        veriTabaniKomutGonder($dataBase, $data['command']);
+        break;
+    }
+    case "GET":{
+        $arr = array();
+        $sonuc = veriTabaniKomutGonder($dataBase, 'SELECT * FROM `calisma_plani` WHERE 1;');
+        if ($sonuc->num_rows > 0) {
+            while($row = $sonuc->fetch_assoc()) {
+                $arr = array_merge($arr, array($row['kosul']=>$row['deger']));
+            }
+            echo json_encode($arr);
+        }
+        break;
+    }
+}
+
+mysqli_close($dataBase);
 function veriTabaninaBaglan($username, $password, $databaseName)
 {
     $servername = "localhost";
