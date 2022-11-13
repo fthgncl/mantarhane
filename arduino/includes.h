@@ -1,7 +1,14 @@
+#define ARRAY_SIZE(array) ((sizeof(array))/(sizeof(array[0])))
+#define ISIK D5
+#define FAN D6
+#define NEM_MAKINESI D7
+#define KLIMA_ISITMA D8
+#define KLIMA_SOGUTMA D1
+enum { ISIK_CALISMA_SURESI, ISIK_BEKLEME_SURESI, FAN_CALISMA_SURESI, FAN_BEKLEME_SURESI, NEM_ALT_DEGER, NEM_UST_DEGER, SICAKLIK_ALT_DEGER, SICAKLIK_UST_DEGER };
+int calismaPlani[8];
+
 /* AsyncJson includes */
 #include <AsyncJson.h>
-JsonObject PINS;
-JsonObject calismaPlani;
 /***********************/
 
 /* Wifi includes */
@@ -34,8 +41,10 @@ const String SQL_dataBaseName = "mantarhane_mantar";
 
 /* Data Control includes */
 unsigned long nowTime;
-unsigned long lastDataUpdateTime;
-const int updatePeriotMillis = 10000;
+unsigned long updatePeriotMillis = 10000;
+unsigned long lastDataUpdateTime = updatePeriotMillis;
+unsigned long lastDevicesControlTime;
+bool ilkDataAlindiMi = false;
 /***********************/
 
 /* Sicaklik Sensorleri includes */
