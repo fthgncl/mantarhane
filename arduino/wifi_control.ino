@@ -5,7 +5,8 @@ void connectWifi() {
   }
 
   WiFi.begin(ssid, password);
-  Serial.println("");
+  Serial.print(ssid);
+  Serial.println(" cihazına bağlanılıyor...");
 
   while (WiFi.status() != WL_CONNECTED && ilkBaglanti ) {
     delay(500);
