@@ -8,6 +8,7 @@ void setup() {
   set_pins();
   connectWifi();
   web_server_setup();
+  sicaklik_control_setup();
 
 }
 
@@ -18,6 +19,7 @@ void loop() {
   if ( devicesControlTime() ){
     isik_loop();
     fan_loop();
+    sicaklik_control_loop();
   }
   
 }

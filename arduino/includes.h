@@ -50,4 +50,7 @@ bool ilkDataAlindiMi = false;
 /* Sicaklik Sensorleri includes */
 #include <OneWire.h>
 #include <DallasTemperature.h>
+#define PIN_SICAKLIK_SENSOR_TELI D2
+OneWire oneWire(PIN_SICAKLIK_SENSOR_TELI);
+DallasTemperature sensors(&oneWire);
 /***********************/
