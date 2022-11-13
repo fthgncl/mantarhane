@@ -1,13 +1,18 @@
 <?php
+
+if ($_SERVER["REQUEST_METHOD"] != "POST"){
+    break;
+}
+
 $data = json_decode(file_get_contents('php://input'), true);
 $dataBase = veriTabaninaBaglan($data['username'], $data['password'], $data['databaseName']);
 
-switch($_SERVER["REQUEST_METHOD"]){
-    case "POST":{
+switch($data['command']){
+    default:{
         veriTabaniKomutGonder($dataBase, $data['command']);
         break;
     }
-    case "GET":{
+    case "get_all_data":{
         $arr = array();
         $sonuc = veriTabaniKomutGonder($dataBase, 'SELECT * FROM `calisma_plani` WHERE 1;');
         if ($sonuc->num_rows > 0) {
