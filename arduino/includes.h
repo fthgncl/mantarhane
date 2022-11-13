@@ -1,5 +1,6 @@
 /* AsyncJson includes */
 #include <AsyncJson.h>
+JsonObject PINS;
 JsonObject calismaPlani;
 /***********************/
 
