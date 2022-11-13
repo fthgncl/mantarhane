@@ -1,9 +1,9 @@
 #define ARRAY_SIZE(array) ((sizeof(array))/(sizeof(array[0])))
-#define ISIK D5
-#define FAN D6
-#define NEM_MAKINESI D7
-#define KLIMA_ISITMA D8
-#define KLIMA_SOGUTMA D1
+#define PIN_ISIK D5
+#define PIN_FAN D6
+#define PIN_NEM_MAKINESI D7
+#define PIN_KLIMA_ISITMA D8
+#define PIN_KLIMA_SOGUTMA D1
 enum { ISIK_CALISMA_SURESI, ISIK_BEKLEME_SURESI, FAN_CALISMA_SURESI, FAN_BEKLEME_SURESI, NEM_ALT_DEGER, NEM_UST_DEGER, SICAKLIK_ALT_DEGER, SICAKLIK_UST_DEGER };
 int calismaPlani[8];
 
@@ -41,8 +41,8 @@ const String SQL_dataBaseName = "mantarhane_mantar";
 
 /* Data Control includes */
 unsigned long nowTime;
-unsigned long updatePeriotMillis = 10000;
-unsigned long lastDataUpdateTime = updatePeriotMillis;
+unsigned long updatePeriotMillis = 60000;
+unsigned long lastDataUpdateTime = -1*updatePeriotMillis;
 unsigned long lastDevicesControlTime;
 bool ilkDataAlindiMi = false;
 /***********************/

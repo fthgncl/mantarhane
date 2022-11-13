@@ -1,7 +1,7 @@
 void set_pins() {
-  pinMode(ISIK, OUTPUT);
-  pinMode(FAN, OUTPUT);
-  pinMode(NEM_MAKINESI, OUTPUT);
-  pinMode(KLIMA_ISITMA, OUTPUT);
-  pinMode(KLIMA_SOGUTMA, OUTPUT);
+  pinMode(PIN_ISIK, OUTPUT);
+  pinMode(PIN_FAN, OUTPUT);
+  pinMode(PIN_NEM_MAKINESI, OUTPUT);
+  pinMode(PIN_KLIMA_ISITMA, OUTPUT);
+  pinMode(PIN_KLIMA_SOGUTMA, OUTPUT);
 }
