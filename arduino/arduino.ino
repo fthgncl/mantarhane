@@ -6,10 +6,9 @@ void setup() {
   connectWifi();
   web_server_setup();
 
-  SQL_send_command("komut");
 }
 
 void loop() {
-
-
+  nowTime = millis();
+  loop_data_control();
 }

@@ -26,3 +26,10 @@ const String SQL_username = "mantarhane_Mantar";
 const String SQL_password = "Harun.14";
 const String SQL_dataBaseName = "mantarhane_mantar";
 /***********************/
+
+/* Data Control includes */
+unsigned long nowTime;
+unsigned long lastDataUpdateTime;
+const int updatePeriotMillis = 10000;
+JsonObject calismaPlani;
+/***********************/
