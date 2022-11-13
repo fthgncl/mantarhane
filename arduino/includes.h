@@ -1,3 +1,8 @@
+/* AsyncJson includes */
+#include <AsyncJson.h>
+JsonObject calismaPlani;
+/***********************/
+
 /* Wifi includes */
 #include <ESP8266WiFi.h>
 IPAddress local_IP(192, 168, 1, 199);
@@ -17,9 +22,8 @@ const char* password = "wifibizeozel";
 AsyncWebServer server(webServerPort);
 /***********************/
 
-/* HTTPClient - AsyncJson - SQL includes */
+/* HTTPClient - SQL includes */
 #include <ESP8266HTTPClient.h>
-#include <AsyncJson.h>
 const String ServerDomain = "http://mantarhane.tk";
 const String ServerPHPpage = "sql_komut.php";
 const String SQL_username = "mantarhane_Mantar";
@@ -31,5 +35,9 @@ const String SQL_dataBaseName = "mantarhane_mantar";
 unsigned long nowTime;
 unsigned long lastDataUpdateTime;
 const int updatePeriotMillis = 10000;
-JsonObject calismaPlani;
+/***********************/
+
+/* Sicaklik Sensorleri includes */
+#include <OneWire.h>
+#include <DallasTemperature.h>
 /***********************/
