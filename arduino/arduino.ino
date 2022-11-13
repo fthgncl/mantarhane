@@ -17,6 +17,7 @@ void loop() {
 
   if ( devicesControlTime() ){
     isik_loop();
+    fan_loop();
   }
   
 }
