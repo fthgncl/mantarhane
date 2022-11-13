@@ -15,6 +15,7 @@ void loop_data_control() {
       calismaPlani[NEM_UST_DEGER] = int(json_calismaPlani["nem_ust_deger"]);
       calismaPlani[SICAKLIK_ALT_DEGER] = int(json_calismaPlani["sicaklik_alt_deger"]);
       calismaPlani[SICAKLIK_UST_DEGER] = int(json_calismaPlani["sicaklik_ust_deger"]);
+      Serial.println("Veri tabanından veriler çekildi.");
       ilkDataAlindiMi = true;
     }
   }
