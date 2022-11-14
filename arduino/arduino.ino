@@ -9,6 +9,7 @@ void setup() {
   connectWifi();
   web_server_setup();
   sicaklik_control_setup();
+  nem_sensor_setup();
 
 }
 
@@ -20,6 +21,7 @@ void loop() {
     isik_loop();
     fan_loop();
     sicaklik_control_loop();
+    nem_control_loop();
   }
   
 }

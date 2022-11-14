@@ -1,4 +1,5 @@
 #define ARRAY_SIZE(array) ((sizeof(array))/(sizeof(array[0])))
+#define PIN_NEM_SENSORU D4
 #define PIN_ISIK D5
 #define PIN_FAN D6
 #define PIN_NEM_MAKINESI D7
@@ -53,4 +54,10 @@ bool ilkDataAlindiMi = false;
 #define PIN_SICAKLIK_SENSOR_TELI D2
 OneWire oneWire(PIN_SICAKLIK_SENSOR_TELI);
 DallasTemperature sensors(&oneWire);
+/***********************/
+
+/* Nem Sensoru includes */
+#include <DHT.h>
+#define DHTTYPE DHT11
+DHT dht(PIN_NEM_SENSORU, DHTTYPE);
 /***********************/
