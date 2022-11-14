@@ -8,7 +8,7 @@ void nem_control_loop() {
 }
 void dht11_nemIslemleri(float nem) {
   if ( isnan(nem) ) {
-    Serial.println("DHT Nem Sensoru okuma hatasi!");
+    Serial.println("DHT Nem Sensoru okuma hatası !");
     return;
   }
   nem_cihazi_calisma_durumu = nem < calismaPlani[nem_cihazi_calisma_durumu?NEM_UST_DEGER:NEM_ALT_DEGER];
@@ -16,7 +16,7 @@ void dht11_nemIslemleri(float nem) {
 }
 void dht11_isiIslemleri(float sicaklik) {
   if ( isnan(sicaklik) ) {
-    Serial.println("DHT Isı Sensoru okuma hatasi!");
+    Serial.println("DHT Isı Sensoru okuma hatası !");
     return;
   }
 }
