@@ -19,4 +19,5 @@ void dht11_isiIslemleri(float sicaklik) {
     Serial.println("DHT Isı Sensoru okuma hatası !");
     return;
   }
+  dht11_sicaklik = sicaklik;
 }

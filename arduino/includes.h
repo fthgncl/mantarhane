@@ -54,10 +54,12 @@ bool ilkDataAlindiMi = false;
 #define PIN_SICAKLIK_SENSOR_TELI D2
 OneWire oneWire(PIN_SICAKLIK_SENSOR_TELI);
 DallasTemperature sensors(&oneWire);
+float sicaklikDegerleri[4];
 /***********************/
 
 /* Nem Sensoru includes */
 #include <DHT.h>
 #define DHTTYPE DHT11
 DHT dht(PIN_NEM_SENSORU, DHTTYPE);
+float dht11_sicaklik;
 /***********************/

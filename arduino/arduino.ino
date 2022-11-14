@@ -23,6 +23,10 @@ void loop() {
     sicaklik_control_loop();
     nem_control_loop();
   }
+
+  if ( sensorVerisiGondermeZamaniGeldiMi() ){
+    sensor_verilerini_gonder();
+  }
   
 }
 bool devicesControlTime() {
