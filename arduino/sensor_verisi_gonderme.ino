@@ -1,10 +1,10 @@
 unsigned long sonVeriGondermeZamani;
 void sensor_verilerini_gonder() {
-  String url = ServerDomain + "/veri.php?";
+  String url = ServerDomain + "/veri.php?ekle=1&";
   for ( byte i = 0 ; i < ARRAY_SIZE(sicaklikDegerleri) ; i++) {
-    url += "sensor" + String(i + 1) + "=" + String(sicaklikDegerleri[i], 4) + "&";
+    url += "toprakisisi" + String(i + 1) + "=" + String(sicaklikDegerleri[i], 4) + "&";
   }
-  url += "toprakisisi=" + String(dht11_sicaklik,4);
+  url += "dht11_isi=" + String(dht11_sicaklik,4) + "&dht11_nem=" + String(dht11_nem,4);
   Serial.println(url);
 
   bool islemBasarilimi = sensor_verisi_http_request(url);

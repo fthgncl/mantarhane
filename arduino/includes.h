@@ -62,4 +62,5 @@ float sicaklikDegerleri[4];
 #define DHTTYPE DHT11
 DHT dht(PIN_NEM_SENSORU, DHTTYPE);
 float dht11_sicaklik;
+float dht11_nem;
 /***********************/

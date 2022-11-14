@@ -11,6 +11,7 @@ void dht11_nemIslemleri(float nem) {
     Serial.println("DHT Nem Sensoru okuma hatası !");
     return;
   }
+  dht11_nem = nem;
   nem_cihazi_calisma_durumu = nem < calismaPlani[nem_cihazi_calisma_durumu?NEM_UST_DEGER:NEM_ALT_DEGER];
   digitalWrite(PIN_NEM_MAKINESI,nem_cihazi_calisma_durumu?HIGH:LOW);
 }
